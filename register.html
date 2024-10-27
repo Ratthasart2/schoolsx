@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ลงทะเบียนนักศึกษา</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>เพิ่มนักศึกษา</h1>
+        <form id="studentForm">
+            <input type="text" id="studentId" placeholder="รหัสนักศึกษา" required>
+            <input type="text" id="firstName" placeholder="ชื่อจริง" required>
+            <input type="text" id="lastName" placeholder="นามสกุล" required>
+            <input type="date" id="dob" required>
+            <select id="gender" required>
+                <option value="">เลือกเพศ</option>
+                <option value="male">ชาย</option>
+                <option value="female">หญิง</option>
+                <option value="other">อื่น ๆ</option>
+            </select>
+            <input type="text" id="address" placeholder="ที่อยู่" required>
+            <input type="tel" id="phone" placeholder="เบอร์โทร" required>
+            <input type="email" id="email" placeholder="อีเมล" required>
+            <select id="status" required>
+                <option value="">สถานะ</option>
+                <option value="active">ใช้งาน</option>
+                <option value="inactive">ไม่ใช้งาน</option>
+            </select>
+            <select id="course" required>
+                <option value="">เลือกวิชา</option>
+                <option value="WebProgram">WebProgram</option>
+            </select>
+            
+            <button type="submit">บันทึกข้อมูล</button>
+            <button type="button" id="showStudentsBtn">แสดงข้อมูลนักศึกษา</button>
+        </form>
+        <div id="studentList"></div>
+        <a href="attendance.html">ไปหน้าลงเวลาเข้าเรียน</a>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>

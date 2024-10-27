@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบลงเวลาเข้าเรียน</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="loginContainer">
+        <h1>เข้าสู่ระบบ</h1>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="ชื่อผู้ใช้" required>
+            <input type="password" id="password" placeholder="รหัสผ่าน" required>
+            <button type="submit">ล็อกอิน</button>
+            <div id="loginError" style="color:red; display:none;"></div>
+        </form>
+    </div>
+
+    <div class="container" id="attendanceContainer" style="display: none;">
+        <h1>ลงเวลาเข้าเรียน</h1>
+        <form id="attendanceForm">
+            <div class="form-group">
+                <select id="studentSelect" required>
+                    <option value="">เลือกนักเรียน</option>
+                </select>
+                <select id="subject" required>
+                    <option value="">เลือกวิชาเรียน</option>
+                    <option value="WebProgram">WebProgram</option>
+                </select>
+                <button type="submit">เช็คอิน</button>
+            </div>
+        </form>
+        <div class="table-container">
+            <table id="attendanceTable">
+                <thead>
+                    <tr>
+                        <th>D</th>
+                        <th>รหัสนักศึกษา</th>
+                        <th>ชื่อผู้เรียน</th>
+                        <th>วิชาเรียน</th>
+                        <th>เวลา</th>
+                        <th>สถานะ</th>
+                        <th>ลบ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <a href="register.html">ไปหน้าลงทะเบียนนักศึกษา</a>
+    </div>
+
+    <script src="attendance.js"></script>
+</body>
+</html>
